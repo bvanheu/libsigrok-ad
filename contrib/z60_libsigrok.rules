@@ -1,0 +1,174 @@
+##
+## This file is part of the libsigrok project.
+##
+## Copyright (C) 2010-2013 Uwe Hermann <uwe@hermann-uwe.de>
+##
+## This program is free software; you can redistribute it and/or modify
+## it under the terms of the GNU General Public License as published by
+## the Free Software Foundation; either version 2 of the License, or
+## (at your option) any later version.
+##
+## This program is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+## GNU General Public License for more details.
+##
+## You should have received a copy of the GNU General Public License
+## along with this program; if not, write to the Free Software
+## Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+##
+
+##
+## Please keep this list sorted alphabetically by vendor/device name.
+##
+
+ACTION!="add|change", GOTO="libsigrok_rules_end"
+SUBSYSTEM!="usb|usbmisc|usb_device", GOTO="libsigrok_rules_end"
+
+# ASIX SIGMA
+# ASIX SIGMA2
+ATTRS{idVendor}=="a600", ATTRS{idProduct}=="a000", MODE="664", GROUP="plugdev"
+
+# Braintechnology USB-LPS
+ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="0498", MODE="664", GROUP="plugdev"
+
+# CEM DT-8852
+ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", MODE="664", GROUP="plugdev"
+
+# CWAV USBee AX
+# ARMFLY AX-Pro (clone of the CWAV USBee AX)
+# ARMFLY Mini-Logic (clone of the CWAV USBee AX)
+# EE Electronics ESLA201A (clone of the CWAV USBee AX)
+# MCU123 USBee AX Pro clone (clone of the CWAV USBee AX)
+# XZL_Studio AX (clone of the CWAV USBee AX)
+ATTRS{idVendor}=="08a9", ATTRS{idProduct}=="0014", MODE="664", GROUP="plugdev"
+
+# CWAV USBee DX
+# XZL_Studio DX (clone of the CWAV USBee DX)
+ATTRS{idVendor}=="08a9", ATTRS{idProduct}=="0015", MODE="664", GROUP="plugdev"
+
+# CWAV USBee SX
+ATTRS{idVendor}=="08a9", ATTRS{idProduct}=="0009", MODE="664", GROUP="plugdev"
+
+# Cypress FX2 eval boards without EEPROM:
+# Lcsoft Mini Board
+# Braintechnology USB Interface V2.x
+ATTRS{idVendor}=="04b4", ATTRS{idProduct}=="8613", MODE="664", GROUP="plugdev"
+
+# Dangerous Prototypes Buspirate (v3)
+# ChronoVu LA8
+ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE="664", GROUP="plugdev"
+
+# Dangerous Prototypes Buspirate (v4)
+ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="fb00", MODE="664", GROUP="plugdev"
+
+# Hantek DSO-2090
+# lsusb: "04b4:2090 Cypress Semiconductor Corp."
+# lsusb after FW upload: "04b5:2090 ROHM LSI Systems USA, LLC"
+ATTRS{idVendor}=="04b4", ATTRS{idProduct}=="2090", MODE="664", GROUP="plugdev"
+ATTRS{idVendor}=="04b5", ATTRS{idProduct}=="2090", MODE="664", GROUP="plugdev"
+
+# Hantek DSO-2150
+# lsusb: "04b4:2150 Cypress Semiconductor Corp."
+# lsusb after FW upload: "04b5:2150 ROHM LSI Systems USA, LLC"
+ATTRS{idVendor}=="04b4", ATTRS{idProduct}=="2150", MODE="664", GROUP="plugdev"
+ATTRS{idVendor}=="04b5", ATTRS{idProduct}=="2150", MODE="664", GROUP="plugdev"
+
+# Hantek DSO-2250
+# lsusb: "04b4:2250 Cypress Semiconductor Corp."
+# lsusb after FW upload: "04b5:2250 ROHM LSI Systems USA, LLC"
+ATTRS{idVendor}=="04b4", ATTRS{idProduct}=="2250", MODE="664", GROUP="plugdev"
+ATTRS{idVendor}=="04b5", ATTRS{idProduct}=="2250", MODE="664", GROUP="plugdev"
+
+# Hantek DSO-5200
+# lsusb: "04b4:5200 Cypress Semiconductor Corp."
+# lsusb after FW upload: "04b5:5200 ROHM LSI Systems USA, LLC"
+ATTRS{idVendor}=="04b4", ATTRS{idProduct}=="5200", MODE="664", GROUP="plugdev"
+ATTRS{idVendor}=="04b5", ATTRS{idProduct}=="5200", MODE="664", GROUP="plugdev"
+
+# Hantek DSO-5200A
+# lsusb: "04b4:520a Cypress Semiconductor Corp."
+# lsusb after FW upload: "04b5:520a ROHM LSI Systems USA, LLC"
+ATTRS{idVendor}=="04b4", ATTRS{idProduct}=="520a", MODE="664", GROUP="plugdev"
+ATTRS{idVendor}=="04b5", ATTRS{idProduct}=="520a", MODE="664", GROUP="plugdev"
+
+# IKALOGIC Scanalogic-2
+ATTRS{idVendor}=="20a0", ATTRS{idProduct}=="4123", MODE="664", GROUP="plugdev"
+
+# IKALOGIC ScanaPLUS
+ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6014", MODE="664", GROUP="plugdev"
+
+# Kecheng KC-330B
+ATTRS{idVendor}=="1041", ATTRS{idProduct}=="8101", MODE="664", GROUP="plugdev"
+
+# Lascar Electronics EL-USB-2
+# Lascar Electronics EL-USB-CO
+# This is actually the generic SiLabs (Cygnal) F32x USBXpress VID:PID.
+ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="0002", MODE="664", GROUP="plugdev"
+
+# Link Instruments MSO-19
+ATTRS{idVendor}=="3195", ATTRS{idProduct}=="f190", MODE="664", GROUP="plugdev"
+
+# Logic Shrimp
+ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="fa95", MODE="664", GROUP="plugdev"
+
+# MiniLA Mockup
+ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6010", MODE="664", GROUP="plugdev"
+
+# MIC 98581
+# MIC 98583
+# Tondaj SL-814
+ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", MODE="664", GROUP="plugdev"
+
+# Openbench Logic Sniffer
+ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="000a", MODE="664", GROUP="plugdev"
+
+# Rigol DS series
+ATTRS{idVendor}=="1ab1", ATTRS{idProduct}=="0588", MODE="664", GROUP="plugdev"
+
+# Agilent DSO1000 series
+ATTRS{idVendor}=="0957", ATTRS{idProduct}=="0588", MODE="664", GROUP="plugdev"
+
+# Saleae Logic
+# EE Electronics ESLA100 (clone of the Saleae Logic)
+# Robomotic MiniLogic (clone of the Saleae Logic)
+# Robomotic BugLogic 3 (clone of the Saleae Logic)
+# MCU123 Saleae Logic clone (clone of the Saleae Logic)
+ATTRS{idVendor}=="0925", ATTRS{idProduct}=="3881", MODE="664", GROUP="plugdev"
+
+# Saleae Logic16
+ATTRS{idVendor}=="21a9", ATTRS{idProduct}=="1001", MODE="664", GROUP="plugdev"
+
+# UNI-T UT-D04 multimeter cable (for various UNI-T and rebranded DMMs)
+# http://sigrok.org/wiki/Device_cables#UNI-T_UT-D04
+# UNI-T UT325
+ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="e008", MODE="664", GROUP="plugdev"
+
+# V&A VA4000 multimeter cable (for various V&A DMMs)
+# http://sigrok.org/wiki/Device_cables#V.26A_VA4000
+ATTRS{idVendor}=="04fc", ATTRS{idProduct}=="0201", MODE="664", GROUP="plugdev"
+
+# Victor 70C
+# Victor 86C
+ATTRS{idVendor}=="1244", ATTRS{idProduct}=="d237", MODE="664", GROUP="plugdev"
+
+# ZEROPLUS Logic Cube LAP-C series
+# There are various devices in the ZEROPLUS Logic Cube series:
+# 0c12:7002: LAP-16128U
+# 0c12:7009: LAP-C(16064)
+# 0c12:700a: LAP-C(16128)
+# 0c12:700b: LAP-C(32128)
+# 0c12:700c: LAP-C(321000)
+# 0c12:700d: LAP-C(322000)
+# 0c12:700e: LAP-C(16032)
+# 0c12:7016: LAP-C(162000)
+ATTRS{idVendor}=="0c12", ATTRS{idProduct}=="7002", MODE="664", GROUP="plugdev"
+ATTRS{idVendor}=="0c12", ATTRS{idProduct}=="7009", MODE="664", GROUP="plugdev"
+ATTRS{idVendor}=="0c12", ATTRS{idProduct}=="700a", MODE="664", GROUP="plugdev"
+ATTRS{idVendor}=="0c12", ATTRS{idProduct}=="700b", MODE="664", GROUP="plugdev"
+ATTRS{idVendor}=="0c12", ATTRS{idProduct}=="700c", MODE="664", GROUP="plugdev"
+ATTRS{idVendor}=="0c12", ATTRS{idProduct}=="700d", MODE="664", GROUP="plugdev"
+ATTRS{idVendor}=="0c12", ATTRS{idProduct}=="700e", MODE="664", GROUP="plugdev"
+ATTRS{idVendor}=="0c12", ATTRS{idProduct}=="7016", MODE="664", GROUP="plugdev"
+
+LABEL="libsigrok_rules_end"
