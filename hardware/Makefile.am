@@ -21,6 +21,7 @@
 SUBDIRS = \
 	agilent-dmm \
 	alsa \
+	analog-discovery \
 	appa-55ii \
 	asix-sigma \
 	brymen-dmm \
@@ -66,6 +67,10 @@ endif
 
 if HW_ALSA
 libsigrokhardware_la_LIBADD += alsa/libsigrok_hw_alsa.la
+endif
+
+if HW_ANALOG_DISCOVERY
+libsigrokhardware_la_LIBADD += analog-discovery/libsigrok_hw_analog_discovery.la
 endif
 
 if HW_APPA_55II

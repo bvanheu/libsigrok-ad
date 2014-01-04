@@ -94,6 +94,15 @@ AC_ARG_ENABLE(alsa, AC_HELP_STRING([--enable-alsa],
 	[HW_ALSA="$enableval"],
 	[HW_ALSA=$HW_ENABLED_DEFAULT])
 
+AC_ARG_ENABLE(analog-discovery, AC_HELP_STRING([--enable-analog-discovery],
+	[enable analog discovery support [default=yes]]),
+	[HW_ANALOG_DISCOVERY="$enableval"],
+	[HW_ANALOG_DISCOVERY=$HW_ENABLED_DEFAULT])
+AM_CONDITIONAL(HW_ANALOG_DISCOVERY, test x$HW_ANALOG_DISCOVERY = xyes)
+if test "x$HW_ANALOG_DISCOVERY" = "xyes"; then
+	AC_DEFINE(HAVE_HW_ANALOG_DISCOVERY, 1, [analog discovery support])
+fi
+
 AC_ARG_ENABLE(appa-55ii, AC_HELP_STRING([--enable-appa-55ii],
 	[enable APPA 55II support [default=yes]]),
 	[HW_APPA_55II="$enableval"],
@@ -560,6 +569,7 @@ AC_SUBST(SR_PACKAGE_VERSION)
 AC_CONFIG_FILES([Makefile version.h hardware/Makefile
 		 hardware/agilent-dmm/Makefile
 		 hardware/alsa/Makefile
+		 hardware/analog-discovery/Makefile
 		 hardware/appa-55ii/Makefile
 		 hardware/asix-sigma/Makefile
 		 hardware/brymen-dmm/Makefile
@@ -628,6 +638,7 @@ done
 echo -e "\nEnabled hardware drivers:\n"
 echo "  - agilent-dmm..................... $HW_AGILENT_DMM"
 echo "  - alsa............................ $HW_ALSA"
+echo "  - analog-discovery................ $HW_ANALOG_DISCOVERY"
 echo "  - appa-55ii....................... $HW_APPA_55II"
 echo "  - asix-sigma...................... $HW_ASIX_SIGMA"
 echo "  - brymen-dmm...................... $HW_BRYMEN_DMM"
